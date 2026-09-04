@@ -5,7 +5,7 @@ class AlunoService{
     async create(aluno){
         const novoAluno = await prisma.aluno.create({data: aluno});
 
-        return aluno;
+        return novoAluno;
     }
 }
 
