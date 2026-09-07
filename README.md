@@ -38,7 +38,7 @@ npx prisma generate
 
 Esse comando irá fazer o Prisma gerar o Prisma Client a partir do seu schema.prisma.
 
-#### 3. Variáveis de Ambiente
+### 3. Variáveis de Ambiente
 
 > ⚠️ **Lembrete:** sempre que alterar o banco de dados, usuário, senha, porta ou ambiente de execução, **atualize as variáveis de ambiente abaixo**.
 
