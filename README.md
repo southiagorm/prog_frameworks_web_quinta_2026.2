@@ -30,6 +30,14 @@ npm install
 
 Esse comando irá instalar todas as dependências necessárias para executar o projeto.
 
+Depois,
+
+```bash
+npx prisma generate
+```
+
+Esse comando irá fazer o Prisma gerar o Prisma Client a partir do seu schema.prisma.
+
 ### 3. Executar o projeto
 
 Após a instalação das dependências, execute o comando definido no projeto para iniciá-lo, por exemplo:
