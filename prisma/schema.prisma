@@ -11,10 +11,27 @@ datasource db {
   provider = "mysql"
 }
 
-model Aluno{
+enum Role{
+  ADMIN
+  ALUNO 
+  PROFESSOR
+}
+
+model Usuario{
+  id Int @id @default(autoincrement())
+  email String @unique
+  password String
+  role Role
+
+  pessoa Pessoa?
+}
+
+model Pessoa{
   id Int @id @default(autoincrement())
   nome String
-  email String @unique
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  usuarioId Int @unique
+  usuario Usuario @relation(fields: [usuarioId], references: [id])
 }

@@ -1,7 +1,7 @@
-const alunoSchema = require("../schemas/alunoSchema");
+const pessoaSchema = require("../schemas/pessoaSchema");
 
-const validarAluno = (request, response, next)=>{
-    const result = alunoSchema.safeParse(request.body);
+const validarPessoa = (request, response, next)=>{
+    const result = pessoaSchema.safeParse(request.body);
     if(!result.success){
         const errors = result.error.issues.map((e)=>{
             return {
@@ -15,4 +15,4 @@ const validarAluno = (request, response, next)=>{
     next();
 };
 
-module.exports = validarAluno;
+module.exports = validarPessoa;
