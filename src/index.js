@@ -2,6 +2,7 @@ require("dotenv/config")
 const express = require("express");
 const pessoaRouter = require("./routes/pessoaRoutes");
 const usuarioRouter = require("./routes/usuarioRoutes");
+const authRouter = require("./routes/authRoutes");
 
 const app = express();
 app.use(express.json());
@@ -11,6 +12,7 @@ app.use((request, response, next)=>{
 });
 app.use("/pessoas", pessoaRouter);
 app.use("/usuarios", usuarioRouter);
+app.use("/", authRouter);
 
 app.listen(process.env.PORT, ()=>{
     console.log(`Server running on server: ${process.env.PORT}`)
